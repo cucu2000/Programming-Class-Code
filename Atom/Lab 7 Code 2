@@ -1,0 +1,17 @@
+public class Bounds { 
+    public static void main(String args[]) {
+     try{
+       double [] bills = {1,2,3,4,5};
+
+       for (int i = 0; i < 6; i++) {
+       System.out.println ("Result = " + bills[i]);
+    }
+
+}catch(ArrayIndexOutOfBoundsException error){
+
+  System.out.println(error.getMessage());
+  System.out.println(error.toString());
+  System.out.println("Array is out of bounds");
+   }
+  }
+ }
