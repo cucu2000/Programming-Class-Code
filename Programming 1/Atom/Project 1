@@ -1,0 +1,35 @@
+import java.util.*;
+  public class Main{
+      public static void main(String [] args){
+
+          Scanner scan = new Scanner(System.in);
+
+          System.out.println("Welcome to the Kaleb Cosgrave Calculator 1");
+
+            System.out.println("Input Number 1");
+            byte number1 = scan.nextByte();
+
+            System.out.println("Input Number 2");
+            byte number2 = scan.nextByte();
+
+            System.out.print("The sum of the two numbers is ");
+            System.out.println(number1 + number2);
+
+            System.out.print("The difference of the two numbers is ");
+            System.out.println(number1 - number2);
+
+            System.out.print("The product of the two numbers is ");
+            System.out.println(number1 * number2);
+
+            System.out.print("The modulus of the two numbers is ");
+            System.out.println(number1 % number2);
+
+            System.out.print("The two numbers squared are ");
+            System.out.println(Math.pow(number1, 2) + " and " + Math.pow(number2, 2));
+
+            System.out.print("The two numbers added and then squared equals ");
+            System.out.println((number1 + number2)*(number1 + number2));
+
+            System.out.println("Thank you for using Kaleb Cosgrave Calculator 1");
+  }
+}

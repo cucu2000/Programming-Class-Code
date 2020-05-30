@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+  static Scanner scan = new Scanner(System.in);
+ public static void main(String [] args){
+   System.out.println("Type in a sentence");
+
+   String sentence = scan.nextLine();
+
+   int numberOfWords = countWords(sentence);
+
+   System.out.println("The number of words equals " + numberOfWords);
+
+ }
+ public static int countWords(String sentence){
+   int words = 0;
+   if(sentence.isEmpty()){
+     return words;
+   }
+   String[] numberOfWords = sentence.split("\\s+");
+   words = numberOfWords.length;
+   return words;
+ }
+}

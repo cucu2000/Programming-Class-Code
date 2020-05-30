@@ -1,0 +1,53 @@
+import java.util.*;
+public class Main{
+static Scanner scan = new Scanner(System.in);
+  public static void main(String[] args){
+    System.out.println("Enter Grade 1");
+    int grade1 = scan.nextInt();
+
+    System.out.println("Enter Grade 2");
+    int grade2 = scan.nextInt();
+
+    System.out.println("Enter Grade 3");
+    int grade3 = scan.nextInt();
+
+    System.out.println("Enter Grade 4");
+    int grade4 = scan.nextInt();
+
+    System.out.println("Enter Grade 5");
+    int grade5 = scan.nextInt();
+
+    int scale[] = new int [5];
+    scale[0] = grade1;
+    scale[1] = grade2;
+    scale[2] = grade3;
+    scale[3] = grade4;
+    scale[4] = grade5;
+
+    int greatest = findMax(scale);
+    int lowest = findMin(scale);
+    int average = ((scale[0] + scale[1] + scale[2] + scale[3] + scale[4])/5);
+
+    System.out.println("The greatest grade is " + greatest);
+    System.out.println("The smallest grade is " + lowest);
+    System.out.println("The average is " + average);
+  }
+  private static int findMax(int [] scale){
+    int maxValue = 0;
+    for(int i = 0; i < scale.length; i++){
+      if(scale[i] > maxValue) {
+        maxValue = scale[i];
+      }
+    }
+     return maxValue;
+  }
+  private static int findMin(int [] scale){
+    int minValue = 1000;
+    for(int i = 0; i < scale.length; i++){
+      if(scale[i] < minValue){
+        minValue = scale[i];
+      }
+    }
+    return minValue;
+  }
+}

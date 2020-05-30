@@ -1,0 +1,98 @@
+//import Scanner
+import java.util.*;
+
+//start program
+public class Main{
+  public static void main(String[] args){
+
+//intialize variables
+    Scanner scan = new Scanner(System.in);
+    String operation = "";
+    int numberTwo = 0;
+
+//welcome message
+    System.out.println("Welcome to the Kaleb Calculator II");
+
+//check for integer input
+//imput # 1
+    System.out.println("Input Number One");
+    while(!scan.hasNextInt()){
+      String garbage = scan.nextLine();
+      System.out.println(garbage + " is not a number");
+      System.out.println("Input Number One");
+    }
+    int numberOne = scan.nextInt();
+
+//operations shown again and repeats till exit is typed
+//list all mathmatical operations
+//allow user to choose which one
+   do{
+    System.out.println("Choose a operation from the following");
+    System.out.print("ADD, +, SUBTRACT, -, MULTIPLY, *, DIVIDE, /, MODLUS, %,");
+    System.out.println("EXIT, E");
+    operation = scan.next();
+    operation = operation.toLowerCase();
+
+// input number 2
+      if(!operation.equals("e") && (!operation.equals("exit"))){
+       System.out.println("Input Number Two");
+        while(!scan.hasNextInt()){
+         String dump = scan.next();
+         System.out.println(dump + " is not a number");
+         System.out.println("Input Number two");
+        }
+      numberTwo = scan.nextInt();
+      }
+
+// do the operation with the 2 numbers
+    switch(operation){
+      case "add":
+      case "+":
+        numberOne = numberOne + numberTwo;
+        System.out.println(numberOne);
+        break;
+
+      case "subtract":
+      case "-":
+        numberOne = numberOne - numberTwo;
+        System.out.println(numberOne);
+        break;
+
+      case "multiply":
+      case "*":
+        numberOne = numberOne * numberTwo;
+        System.out.println(numberOne);
+        break;
+
+      case "divide":
+      case "/":
+         if(numberTwo == 0){
+           System.out.println("You cannot divide by zero");
+           break;
+         }else{
+           numberOne = numberOne / numberTwo;
+           System.out.println(numberOne);
+           break;
+
+         }
+      case "modulus":
+      case "%":
+       numberOne = numberOne % numberTwo;
+       System.out.println(numberOne);
+       break;
+
+       case "e":
+       case "exit":
+        System.out.print("Your final number was " + numberOne);
+    System.out.print(" Thank you for using the Kaleb Calculator II");
+    scan.close();
+    System.exit(0);
+
+       default:
+        System.out.println("Not a valid operation");
+        break;
+    }
+
+   }while((!operation.equals("e")) && !operation.equals("exit"));
+  }
+}

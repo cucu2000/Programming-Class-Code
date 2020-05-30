@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main{
+  public static void main(String[] args){
+     Scanner scan = new Scanner(System.in);
+
+     System.out.println("Pick a number");
+
+    int x = scan.nextInt();
+
+     if (x > 1000){
+       System.out.println("This is a big brain number");
+
+      }else if (x < 1000){
+      System.out.println("This is a small brain number");
+    }else {
+    System.out.println("You are big brain");
+    }
+  }
+}
