@@ -1,0 +1,9 @@
+Cat Food
+Dog Food
+Sunflower seeds
+Bird bath
+Squirrel guard
+Bird feeder
+Total cost: 	$128.91
+
+Process finished with exit code 0

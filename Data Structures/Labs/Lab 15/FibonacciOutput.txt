@@ -1,0 +1,5 @@
+The Fibonacci Sequence of 4 is: 5
+The Fibonacci Sum of 16 is: 1597
+The Fibonacci Sum of 2 is: 2
+The Fibonacci Sum of 5 is: 8
+The Fibonacci Sum of 8 is: 34

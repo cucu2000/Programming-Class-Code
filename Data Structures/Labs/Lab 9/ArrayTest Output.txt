@@ -1,0 +1,11 @@
+Hello Kaleb Cosgrave
+89 
+78 
+97 
+95 
+100 
+The average of the array is: 91
+The average of the first 3 students is: 88
+Thank you Kaleb Cosgrave
+
+Process finished with exit code 0

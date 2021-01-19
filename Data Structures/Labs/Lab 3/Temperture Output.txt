@@ -1,0 +1,19 @@
+Enter 7 temperatures:
+70
+74
+80
+89
+78
+67
+91
+The average temperature is 78.42857142857143
+The temperatures are
+70.0 below average.
+74.0 below average.
+80.0 above average.
+89.0 above average.
+78.0 below average.
+67.0 below average.
+91.0 above average.
+
+Process finished with exit code 0

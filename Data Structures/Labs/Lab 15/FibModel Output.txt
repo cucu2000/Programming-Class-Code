@@ -1,0 +1,6 @@
+The Fib Model  of 16 is: 3
+The Fib Model  of 4 is: 1
+The Fib Model  of 32 is: 5
+The Fib Model  of 64 is: 8
+The Fib Model  of 100 is: 13
+

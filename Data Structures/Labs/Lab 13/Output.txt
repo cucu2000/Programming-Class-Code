@@ -1,0 +1,20 @@
+Customer 1 enters line at time 0. Transaction time is 1
+Customer 1 begins service at time 0. Time waited is 0
+Customer 2 enters line at time 1. Transaction time is 4
+Customer 2 begins service at time 1. Time waited is 0
+Customer 3 enters line at time 2. Transaction time is 9
+Customer 4 enters line at time 3. Transaction time is 3
+Customer 5 enters line at time 4. Transaction time is 2
+Customer 6 enters line at time 5. Transaction time is 4
+Customer 3 begins service at time 5. Time waited is 3
+Customer 7 enters line at time 6. Transaction time is 9
+Customer 8 enters line at time 7. Transaction time is 2
+Customer 9 enters line at time 8. Transaction time is 1
+Customer 10 enters line at time 9. Transaction time is 10
+
+Number served = 3
+Total time waited = 3
+Average time waited = 1.0
+Number left in line = 7
+
+Process finished with exit code 0

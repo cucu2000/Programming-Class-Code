@@ -1,0 +1,8 @@
+The contents of the Array is 
+92 64 52 59 0 82 73 5 88 37 
+Insertion Sort
+0 5 37 52 59 64 73 82 88 92 
+Selection Sort
+0 5 37 52 59 64 73 82 88 92 
+Shell Sort
+0 5 37 52 59 64 73 82 88 92 

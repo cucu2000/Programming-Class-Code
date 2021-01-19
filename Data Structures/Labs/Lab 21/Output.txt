@@ -1,0 +1,39 @@
+The contents of the Array is 
+77 7 96 54 55 88 11 18 46 49 34 23 71 5 19 48 46 64 12 21  
+ 
+The sorted Array is 
+5 7 11 12 18 19 21 23 34 46 46 48 49 54 55 64 71 77 88 96  
+ 
+The average of the Array is 
+42
+ 
+Is the average in the Array?
+42 is not in the array
+
+
+
+The contents of the Array is 
+94 97 9 2 82 7 38 94 51 0 19 32 26 47 85 25 36 99 79 34  
+ 
+The sorted Array is 
+0 2 7 9 19 25 26 32 34 36 38 47 51 79 82 85 94 94 97 99  
+ 
+The average of the Array is 
+47
+ 
+Is the average in the Array?
+47 is in the array
+
+
+
+The contents of the Array is 
+63 18 37 38 51 39 52 34 76 0 21 65 0 9 78 80 84 49 97 98  
+ 
+The sorted Array is 
+0 0 9 18 21 34 37 38 39 49 51 52 63 65 76 78 80 84 97 98  
+ 
+The average of the Array is 
+49
+ 
+Is the average in the Array?
+49 is in the array

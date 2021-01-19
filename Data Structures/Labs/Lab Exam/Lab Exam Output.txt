@@ -1,0 +1,15 @@
+Number 3
+Mango
+Banana
+Apple
+Kiwi
+Orange
+
+Number 5
+Mango
+Grapes
+Apple
+Avocado
+Orange
+
+Process finished with exit code 0

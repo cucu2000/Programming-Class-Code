@@ -1,0 +1,12 @@
+Added a Penny(1 cents).
+Added a Nickel(5 cents).
+Added a Dime(10 cents).
+Added a Quarter(25 cents).
+Removing all the coins:
+Removed a Quarter.
+Removed a Dime.
+Removed a Nickel.
+Removed a Penny.
+All done. Removed 41 cents.
+
+Process finished with exit code 0
