@@ -1,0 +1,26 @@
+AlgoA Output
+
+The value of the first 100000 numbers is: 5000050000
+
+Process finished with exit code 0
+
+
+AlgoB Output
+
+The value of the first 100000 numbers is: 5000050000
+
+Process finished with exit code 0
+
+
+AlgoC Output
+
+The value of the first 100000 numbers is: 5000050000
+
+Process finished with exit code 0
+
+
+testNode Output
+
+Kaleb --->Alex --->Tyler --->Elie --->Chase --->Kyle --->Rachel --->Gabe --->Boris --->Jenny --->Xander --->Vivian --->null
+
+Process finished with exit code 0

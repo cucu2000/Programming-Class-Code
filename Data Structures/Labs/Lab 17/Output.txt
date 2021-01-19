@@ -1,0 +1,29 @@
+Before Change
+
+Create an empty list.
+List should be empty; isEmpty returns true.
+
+Testing add to end:
+List should contain 15 25 35 45.
+[15, 25, 35, 45]
+List should not be empty; isEmpty() returns false.
+
+Testing clear():
+List should be empty; isEmpty returns true.
+
+Process finished with exit code 0
+
+After Change
+
+Create an empty list.
+List should be empty; isEmpty returns true.
+
+Testing add to end:
+List should contain 25 35 45 55.
+[25, 35, 45, 55]
+List should not be empty; isEmpty() returns false.
+
+Testing clear():
+List should be empty; isEmpty returns true.
+
+Process finished with exit code 0

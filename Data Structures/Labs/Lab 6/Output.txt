@@ -1,0 +1,12 @@
+Testing an initially empty bag with  sufficient capacity:
+Adding the following strings to the bag: A A B A C A 
+The bag contains the following string(s):
+A A B A C A 
+
+Testing an initially empty bag that  will be filled to capacity:
+Adding the following strings to the bag: A B A C B C D 
+Unable to add another string to the bag.
+The bag contains the following string(s):
+A B A C B C D 
+
+Process finished with exit code 0

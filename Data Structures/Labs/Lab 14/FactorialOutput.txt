@@ -1,0 +1,5 @@
+The Factorial of 30 is: 1409286144
+The Factorial of 25 is: 2076180480
+The Factorial of 5 is: 120
+The Factorial of 15 is: 2004310016
+The Factorial of 10 is: 3628800
