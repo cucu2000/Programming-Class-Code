@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TableView fx:id="tblStudent" layoutX="14.0" layoutY="14.0" onMouseClicked="#clickView" prefHeight="327.0" prefWidth="668.0">
+        <columns>
+          <TableColumn fx:id="colStudentID" prefWidth="75.0" text="StudentID" />
+          <TableColumn fx:id="colfName" prefWidth="94.1999740600586" text="First Name" />
+            <TableColumn fx:id="collName" prefWidth="82.60000610351562" text="Last Name" />
+            <TableColumn fx:id="colMajor" prefWidth="107.79998779296875" text="Major" />
+            <TableColumn fx:id="colYear" prefWidth="84.20001220703125" text="Year" />
+            <TableColumn fx:id="colEmail" prefWidth="113.80001831054688" text="Email" />
+            <TableColumn fx:id="colPhone" prefWidth="112.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEdit" layoutX="823.0" layoutY="301.0" mnemonicParsing="false" onAction="#edit" prefHeight="26.0" prefWidth="104.0" text="Update Student" />
+      <Button fx:id="btnDelete" layoutX="823.0" layoutY="346.0" mnemonicParsing="false" onAction="#deleteStudent" prefHeight="26.0" prefWidth="104.0" text="Delete Student" />
+      <Button fx:id="btnNew" layoutX="708.0" layoutY="302.0" mnemonicParsing="false" onAction="#newStudent" text=" New Student" />
+      <TableView fx:id="tblCourse" layoutX="14.0" layoutY="349.0" prefHeight="273.0" prefWidth="430.0">
+        <columns>
+          <TableColumn fx:id="colCStudentID" prefWidth="126.79997253417969" text="Student ID" />
+          <TableColumn fx:id="colInstructorID" prefWidth="147.6000518798828" text="Instructor ID" />
+            <TableColumn fx:id="colCourseID" prefWidth="120.39996337890625" text="Course ID" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtStudentID" layoutX="809.0" layoutY="14.0" />
+      <TextField fx:id="txtfName" layoutX="809.0" layoutY="55.0" />
+      <TextField fx:id="txtlName" layoutX="809.0" layoutY="96.0" />
+      <TextField fx:id="txtMajor" layoutX="809.0" layoutY="136.0" />
+      <TextField fx:id="txtYear" layoutX="809.0" layoutY="178.0" />
+      <TextField fx:id="txtEmail" layoutX="809.0" layoutY="217.0" />
+      <TextField fx:id="txtPhone" layoutX="809.0" layoutY="258.0" />
+      <Label layoutX="738.0" layoutY="18.0" text="Student ID:" />
+      <Label layoutX="738.0" layoutY="59.0" text="First Name: " />
+      <Label layoutX="738.0" layoutY="100.0" text="Last Name: " />
+      <Label layoutX="738.0" layoutY="140.0" text="Major: " />
+      <Label layoutX="738.0" layoutY="182.0" text="Year: " />
+      <Label layoutX="738.0" layoutY="221.0" text="Email" />
+      <Label layoutX="713.0" layoutY="262.0" text="Phone Number: " />
+      <Label fx:id="lblInstructorID" layoutX="453.0" layoutY="449.0" text="Instructor ID:" />
+      <Label fx:id="lblCourseID" layoutX="457.0" layoutY="498.0" text="Course ID: " />
+      <TextField fx:id="txtInstructorID" layoutX="533.0" layoutY="445.0" />
+      <TextField fx:id="txtCourseID" layoutX="533.0" layoutY="494.0" />
+      <Button fx:id="btnAddCourse" layoutX="462.0" layoutY="556.0" mnemonicParsing="false" onAction="#newCourse" prefHeight="26.0" prefWidth="120.0" text="Add Course" />
+      <Button fx:id="btnDeleteCourse" layoutX="608.0" layoutY="557.0" mnemonicParsing="false" onAction="#deleteCourse" prefHeight="26.0" prefWidth="120.0" text="Delete Course" />
+   </children>
+</AnchorPane>
