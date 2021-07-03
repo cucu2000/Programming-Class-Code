@@ -1,0 +1,12 @@
+Matrix 1:
+9 5 
+1 4 
+
+Matrix 2:
+7 
+3 
+
+Multiplied Matrix:
+78 
+19 
+[Finished in 2.469s]
