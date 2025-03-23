@@ -1,0 +1,9 @@
+Req: 1. Payment Sys on Manager, Worker, and Part Timer
+     2. Manger = 3000, Worker = 1000 + performance, Part Timer = time * 10
+     3. OOP
+
+     sample Output
+
+     Manager abc's salary is 3000
+     Worker def's salary is 4000
+     Part Timer pqr's salary is 1800

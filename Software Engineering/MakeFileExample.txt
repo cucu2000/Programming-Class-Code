@@ -1,0 +1,6 @@
+GCC = GCC
+FLAGS = -o
+SOURCE = calculator.c add.c substract.c divide.c multiply.c
+
+calculator:
+  $(GCC) $(FLAGS) calculator $(SOURCE)

@@ -1,0 +1,13 @@
+RUN #1
+10
+The number you entered is 10
+5
+The number you entered is 5
+The biggest number is 10
+
+RUN #2
+10
+The number you entered is 10
+15
+The number you entered is 15
+The biggest number is 15

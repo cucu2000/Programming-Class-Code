@@ -1,0 +1,26 @@
+<HTML>
+
+<head>
+
+    <title> Homepage </title>
+
+</head>
+
+<body bgcolor="sky blue" topmargin="100" leftmargin="100">
+
+<!-- view -->
+
+<p style="font-size:30px;color:blue"> <u>Name Here Homepage</u></p>
+
+<img src="Home.jpg" alt="Image" height="200" width="300"><br>
+
+<br>
+<br>
+<br>
+
+<p>Name: Name Here</p>
+
+</body>
+
+
+</HTML>

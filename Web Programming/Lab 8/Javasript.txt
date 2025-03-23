@@ -1,0 +1,30 @@
+var age = 20;
+var weight = 140.5;
+var name = "Kaleb";
+var yes = true;
+//use typeof to get the data type
+
+var v1 = 1/0;
+//The line above gives infinity
+
+var wP ="Web Programming";
+var w = wP.split("Web");
+
+var array = ["y", "x"];
+array.push("z");
+array.sort();
+
+var loop = "Hello ";
+for(var x = 0; x <= 5; x++){
+  loop = loop + "Hello ";
+}
+
+//alert(loop);
+
+var add1 = 100;
+var add2 = 250;
+
+function addNum(num1, num2){
+  return num1 + num2;
+}
+

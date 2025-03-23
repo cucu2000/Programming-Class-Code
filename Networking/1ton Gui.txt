@@ -1,0 +1,230 @@
+[server side]
+
+package netserver_1ton;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.net.*;
+
+public class Mthread extends Thread{
+   //field
+    TextArea dbox;
+    Socket sc;
+    String cm = "";
+    InputStream is;
+    OutputStream os;
+    BufferedReader br;
+    BufferedWriter bw;
+    int ccnt;            
+    
+   //constr   
+    public Mthread(Socket sc, TextArea dbox, int ccnt) {
+        this.dbox = dbox;
+        this.sc = sc;
+        this.ccnt = ccnt;
+        try{
+           //3. IO stream setup
+           is = sc.getInputStream();
+           br = new BufferedReader(new InputStreamReader(is));
+           os = sc.getOutputStream();
+           bw = new BufferedWriter(new OutputStreamWriter(os));
+        }catch(IOException e3){}
+    }//constr
+    
+    //method
+    public void run(){
+        //local variable
+        int cnt=1;
+        String cm;
+        try{
+            //4. IO Stream setup
+            dbox.append("IO stream setup");
+            
+            dbox.append("server: "+"connected to client "+ccnt+"\n");
+            bw.write(ccnt+"th connected!");
+            bw.flush();
+            while (true){
+                cm = br.readLine();
+                dbox.append(ccnt+"th client: "+cm+"\n");
+                if(cm.equals("quit")){
+                   dbox.append("server: "+ccnt+"th client closing ...\n");
+                   bw.write("bye!\n");
+                   bw.flush();
+                   break;
+                }//fi
+                dbox.append("server: "+ccnt+"th client's "+cnt+"th message received\n");
+                bw.write(cnt+"th message recevied\n");
+                bw.flush();
+                cnt++;                
+            }//while
+            //5. socket close
+            dbox.append("\nclose socket\n\n");
+            sc.close();
+            dbox.append("-----------------------------");
+            
+        }catch(IOException e4){}
+    }//run
+    
+}//class
+
+
+public class Netserver_1ton extends Frame{
+    //field
+    private TextArea dbox;
+    
+    //constr
+    public Netserver_1ton(){
+        super("multi_comm server program");
+        dbox = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+        add(dbox, BorderLayout.CENTER);
+        addWindowListener(new WinListener());
+        setSize(450, 300);
+        setVisible(true);        
+    }//constr
+
+    //method
+    public void runServer(){
+       //local variables
+       ServerSocket server;
+       Socket sc;
+       Mthread mt;
+       int clientnum = 1;
+       
+       try{
+           //1. create ServerSocket object
+           server = new ServerSocket(2000, 10);
+           dbox.append("waiting .......\n");
+          try{
+              while(true){
+                 //2. wait for the request by using accept()
+                 sc = server.accept();
+                 mt = new Mthread(sc, dbox, clientnum);
+                 dbox.append("connect client "+clientnum+": "
+                 +sc.getInetAddress().getHostName()+" server is connected\n");
+                 mt.start();
+                 clientnum++;
+              }//while
+          }catch(IOException e2){}
+       }catch(IOException e1){}
+    }//rS
+    
+    
+    public static void main(String[] args) {
+        Netserver_1ton nn = new Netserver_1ton();
+        nn.runServer();
+    } //main
+    
+}//Main
+
+
+public class WinListener extends WindowAdapter{
+    public void windowClosing(WindowEvent e){
+        System.exit(0);
+    }
+}//class
+
+
+
+
+[client side]
+
+package netclient_1ton;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.net.*;
+
+public class Netclient_1ton extends Frame implements ActionListener{
+
+    //field
+    private TextArea dbox;
+    private Label lb;
+    private TextField tf;
+    
+    Socket sc;
+    InputStream is;
+    OutputStream os;
+    BufferedReader br;
+    BufferedWriter bw;
+    String cm;
+    String sm;
+    
+    
+    //constr
+    public Netclient_1ton(){
+        super("multi_comm client program");
+        dbox = new TextArea("", 0, 0, TextArea.SCROLLBARS_VERTICAL_ONLY);
+        add(dbox, BorderLayout.CENTER);
+        lb = new Label("send: ");
+        tf = new TextField(30);
+        tf.addActionListener(this);
+        Panel p = new Panel();
+        p.add(lb); p.add(tf);
+        add(p, BorderLayout.SOUTH);
+        
+        addWindowListener(new WinListener());
+        setSize(450, 300);
+        setVisible(true);
+    }//constr
+
+    //method
+    public void runClient(){
+        try{
+            //1. create socket obj
+            sc = new Socket("localhost", 2000);
+            dbox.append(sc.getInetAddress().getHostName()+" server is connected\n");
+            
+            //2. create IO stream
+            is = sc.getInputStream();
+            br = new BufferedReader(new InputStreamReader(is));
+            os = sc.getOutputStream();
+            bw = new BufferedWriter(new OutputStreamWriter(os));
+            dbox.append("IO stream setup\n");
+            dbox.append("--------------------------\n");
+            
+            //3.communication
+            dbox.append("server: "+br.readLine()+"\n");
+            dbox.append(">>send: "+"connected! thanks!!\n");
+            
+            bw.write("connected! thanks!!\n");
+            bw.flush();
+            
+        }catch(IOException e){}
+    }//rC
+    
+    public static void main(String[] args) {
+        Netclient_1ton nc = new Netclient_1ton();
+        nc.runClient();
+    } //main
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        cm = tf.getText();
+        dbox.append(">>send: "+cm+"\n");
+        
+        try{
+           bw.write(cm+"\n");
+           bw.flush();
+           tf.setText("");
+           sm = br.readLine();
+           dbox.append("server: "+sm+"\n");
+           
+           //4. close socket
+           if(sm.equals("bye!")){
+              dbox.append("\nsocket close");
+              sc.close();
+           }//fi
+        }catch(IOException ioe){}
+    }//aP
+    
+}//class
+
+
+public class WinListener extends WindowAdapter{
+    public void windowClosing(WindowEvent e){
+        System.exit(0);
+    }
+}//class
+

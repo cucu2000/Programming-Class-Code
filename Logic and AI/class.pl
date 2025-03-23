@@ -1,0 +1,12 @@
+instructor(chan,math273).
+instructor(patel,ee222).
+instructor(grossman,cs301).
+instructor(patel,csci4203).
+enroll(john,csci4203).
+enroll(kevin,math273).
+enroll(juana,ee222).
+enroll(juana,cs301).
+enroll(kiko,math273).
+enroll(kiko,cs301).
+teaches(patel,juana).
+professor(X,Y):-instructor(X,C),enroll(Y,C).

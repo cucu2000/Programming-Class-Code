@@ -1,0 +1,25 @@
+/* Example 1 */
+h1{font-size: 30px; color: red;text-align: left;}
+h2{font-size: 50px; color: lime; text-align: center;}
+h3{font-size: 80px; color: blue; text-align: right;}
+
+/* Example 2 */
+#top{
+  background-color: grey;
+  padding: 20px;
+}
+
+.change{
+  font-size: 100px;
+  color: red;
+  font-weight: bold;
+  
+}
+
+/* Example 3 */
+.bgimage{
+  length: 1200px;
+  width: 1000px;
+  background-image: url("https://i.postimg.cc/BnM5CCKR/oklahoma-city-university-1.jpg");
+  background-size: 100%;
+}

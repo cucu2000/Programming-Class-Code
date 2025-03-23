@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="OCU_app.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:OCU_app"
+    xmlns:views="clr-namespace:OCU_app.Views">
+
+    <TabBar>
+        <Tab Title="Profile"
+            Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
+        </Tab>
+
+        <Tab Title="Home"
+            Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+
+        <Tab Title="Map"
+            Icon="map.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MapPage}" />
+        </Tab>
+
+        <Tab Title="Settings"
+            Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+        </Tab>
+
+        <Tab Title="Data"
+             Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate views:DataPage}" />
+        </Tab>
+            
+    </TabBar>
+
+</Shell>

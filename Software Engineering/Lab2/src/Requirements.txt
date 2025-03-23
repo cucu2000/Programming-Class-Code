@@ -1,0 +1,19 @@
+Requirements: Read 11 numbers.
+              Find sum of first 10 numbers
+              Divide the sum by the 11th number
+              Display the Result
+
+b. What Questions are in mind during the process?
+    Prompt User or from file?
+    ==> Scanner or file?
+    if Scanning catch misinputs or dont allow wrong types?
+    Only intergers or floats ect.?
+    Count the numbers; One at a time or loop?
+    Find the sum; for loop or math class?
+    divide by the 11th number: inline or Math class?
+
+
+c.
+Problem solving skills
+ability to foresee user inputs
+skills to manipulate Arrays

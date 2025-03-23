@@ -1,0 +1,5 @@
+1. Build a digital temperature converter that takes in a temperature
+    as Fahrenheit then converts it to Celsius and vice versa.
+
+2.   C = (F - 32) * 5/9
+     F = C(9/5) + 32
