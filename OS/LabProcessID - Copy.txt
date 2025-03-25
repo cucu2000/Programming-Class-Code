@@ -1,0 +1,16 @@
+Lab Week # 3
+
+You are to edit and run the piece of code 
+LabProcess.c
+Modify the code to display the value of 
+the process ID at the points A, B, C, D indicating
+the relationship between the process as mentioned in the code(parent-child).
+
+A: pid = 0 
+B: pid1 = 533 
+C: pid = 533 
+D: pid1 = 532
+
+
+C Parent of A
+D Parent of B
